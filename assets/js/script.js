@@ -31,4 +31,29 @@ var questions = [
     var currentTime = document.querySelector("#currentTime");
     var timeLeft = 80;
     var timepenality = 10;
+    var holdInterval = 0;
     
+    var title = document.querySelector("#quizTitle");
+    var quiz = document.querySelector("#quiz");
+    var quizInfo = document.querySelector("#quizInfo");
+    var questionDiv = document.querySelector("#questionDiv");
+    var quizText = document.querySelector("#quizText");
+    var specialMsg = document.querySelector("#specialMsg");
+
+    startTimer.addEventListener("click", function() {
+        // hide title and start button
+        title.hidden = true;
+        startTimer.hidden = true;
+        
+        if (holdInterval === 0) {
+            holdInterval = setInterval(function() {
+                timeLeft--;
+                currentTime.textContent = "Timer: " + timeLeft;
+                if (timeLeft === 0) {
+                    clearInterval(holdInterval);
+                    currentTime.textContent = "Time's Up!";
+                    endQuiz();
+                }
+            }, 1000);
+        }
+    })

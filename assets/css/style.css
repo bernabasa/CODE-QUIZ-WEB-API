@@ -1,0 +1,14 @@
+.pageCon {
+    background-color: aqua;
+}
+.title {
+    color: brown;
+}
+.timer {
+    color: black;
+}
+.quizInfo {
+    color: blue;
+    align-content: center;
+    text-align: center;
+}

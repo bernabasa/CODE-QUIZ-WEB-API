@@ -4,14 +4,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="styleSheet" href="./assets/css/style.css">
   <title>Conditional Statements</title>
 </head>
 
 <body>
- <h1>Timed Quiz</h1>
- <button>Start</button>
+    <header>
+        <div>
+ <h1>
+    <a href="#">View HighScores</a>
+ </h1>
+        </div>
+    </header>
+    <main class="pageCon" id="mainPageCon">
+      <div class="wrap">
+        <div id="quizTitle">
+          <h2 class="title">
+            Timed Quiz!
+          </h2>
 
-  <script src="script.js"></script>
+        </div>
+        <div class="timer">
+          <span id="currentTime">Timer:80</span>
+        </div>
+        <div id="quiz" class="quiz">
+          <div id="quizInfo">
+            <p id="quizText" class="quizInfo"> Do you want to test your speed by answering questions? Let's go! <br/>  
+            <span>Your goal:</span><br>
+            Try to answer as many as these questions correctly before the timer runs out. <br>
+            keep in mind incorrect answers will be subtract from your time.
+            </p>
+          </div>
+          <div id="questionDiv" class="quiz">
+
+          </div>
+          <button class="btn" id="startTimeBtn">START</button>
+        </div>
+      </div>
+
+
+    </main>
+  <script src="./assets/js/script.js"></script>
 
 </body>
 </html>
